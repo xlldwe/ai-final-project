@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact FashionAI Shop — Get in touch with our support team for help with orders, returns, and general inquiries." />
+  <title>Contact Us — FashionAI Shop</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>" />
+</head>
+<body>
+
+  <!-- ─── HEADER ─────────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Fashion<span>AI</span> Shop</a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Catalog</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── PAGE HERO ─────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have a question, suggestion, or need help? We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT CONTENT ───────────────────────────── -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- ─── Contact Info Sidebar ─── -->
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📧</div>
+              <div class="contact-info-text">
+                <strong>Email</strong>
+                <span>support@fashionai.shop</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-text">
+                <strong>Phone</strong>
+                <span>+380 (44) 123-45-67</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-text">
+                <strong>Address</strong>
+                <span>25 Khreshchatyk Street, Kyiv, Ukraine, 01001</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">🕐</div>
+              <div class="contact-info-text">
+                <strong>Working Hours</strong>
+                <span>Mon–Fri: 9:00 AM – 6:00 PM EET</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">✈️</div>
+              <div class="contact-info-text">
+                <strong>Telegram Bot</strong>
+                <span>@FashionAIShopBot</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f8f8; border-radius: 12px; border-left: 4px solid #e91e63;">
+              <h4 style="font-size: 0.95rem; color: #2d2d2d; margin-bottom: 0.6rem;">Need instant help?</h4>
+              <p style="font-size: 0.88rem; color: #666; margin-bottom: 0.8rem;">
+                Our AI chatbot is available 24/7 for instant answers about products, orders, sizing, and more.
+              </p>
+              <button
+                class="btn btn-primary"
+                style="font-size: 0.88rem; padding: 0.6rem 1.3rem;"
+                onclick="if(window.chatbot) window.chatbot.open(); else alert('Chat loading...');"
+              >
+                Open Chat Assistant
+              </button>
+            </div>
+          </div>
+
+          <!-- ─── Contact Form ─── -->
+          <div class="contact-form-wrapper">
+            <h3>Send Us a Message</h3>
+
+            <div class="form-success" id="form-success">
+              Your message has been sent successfully! We'll get back to you within 24 hours.
+            </div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Full Name *</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="John Doe"
+                  autocomplete="name"
+                  required
+                />
+                <span class="form-error" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="john@example.com"
+                  autocomplete="email"
+                  required
+                />
+                <span class="form-error" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  placeholder="e.g. Order inquiry, Return request..."
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="Describe your question or issue in detail..."
+                  required
+                ></textarea>
+                <span class="form-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- ─── Map placeholder ─── -->
+        <div style="margin-top: 4rem;">
+          <div style="
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e0e0e0;
+            gap: 0.8rem;
+          ">
+            <span style="font-size: 3rem;">🗺️</span>
+            <p style="color: #999; font-size: 0.95rem;">
+              FashionAI Shop — 25 Khreshchatyk Street, Kyiv, Ukraine
+            </p>
+            <a
+              href="https://maps.google.com/?q=Khreshchatyk+25+Kyiv+Ukraine"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="font-size: 0.88rem; padding: 0.6rem 1.3rem;"
+            >
+              View on Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Fashion<span>AI</span> Shop</a>
+        <p>Your AI-powered fashion destination. Discover style, reimagined with intelligence.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">✈️</a>
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">👥</a>
+          <a href="#" class="social-link">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html#products">T-Shirts</a></li>
+          <li><a href="index.html#products">Jeans</a></li>
+          <li><a href="index.html#products">Dresses</a></li>
+          <li><a href="index.html#products">Jackets</a></li>
+          <li><a href="index.html#products">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html#returns">Returns</a></li>
+          <li><a href="faq.html#shipping">Shipping</a></li>
+          <li><a href="faq.html#sizing">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 FashionAI Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

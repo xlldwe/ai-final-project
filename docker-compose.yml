@@ -1,0 +1,80 @@
+services:
+  # ─── Web Backend + Swagger UI ────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: fashionai_backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./backend/data:/app/backend/data
+      - ./web:/app/web
+    networks:
+      - fashionai_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ─── TelebotAPI Bot ───────────────────────────────────────────────────────────
+  bot_telebot:
+    build:
+      context: .
+      dockerfile: bot_telebot/Dockerfile
+    container_name: fashionai_telebot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./bot_telebot/data:/app/bot_telebot/data
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - fashionai_net
+
+  # ─── Aiogram 3.0 Bot ──────────────────────────────────────────────────────────
+  bot_aiogram:
+    build:
+      context: .
+      dockerfile: bot_aiogram/Dockerfile
+    container_name: fashionai_aiogram
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./bot_aiogram/data:/app/bot_aiogram/data
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - fashionai_net
+
+  # ─── Nginx reverse proxy + static files ──────────────────────────────────────
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: fashionai_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - fashionai_net
+
+networks:
+  fashionai_net:
+    driver: bridge
+
+volumes:
+  backend_data:
+  telebot_data:
+  aiogram_data:

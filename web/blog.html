@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FashionAI Shop Blog — Style tips, fashion news, collection highlights, and sustainable fashion guides." />
+  <title>Fashion Blog — FashionAI Shop</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>" />
+</head>
+<body>
+
+  <!-- ─── HEADER ─────────────────────────────────────── -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Fashion<span>AI</span> Shop</a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Catalog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ─── PAGE HERO ─────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Fashion Blog</h1>
+        <p>Style tips, trend reports, sustainable fashion guides, and collection highlights from our team.</p>
+      </div>
+    </section>
+
+    <!-- ─── BLOG CONTENT ──────────────────────────────── -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest Articles</h2>
+          <div class="section-divider"></div>
+          <p>Stay up to date with the latest fashion trends and shopping tips.</p>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+          <div class="loading">
+            <div class="spinner"></div>
+            <p>Loading articles...</p>
+          </div>
+        </div>
+
+        <!-- Static featured articles as fallback / additional content -->
+        <div style="margin-top: 4rem;">
+          <div class="section-header">
+            <h2>Featured Topics</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="features-grid" style="margin-top: 2rem;">
+            <div class="feature-card">
+              <div class="feature-icon">👗</div>
+              <h3>Style Guides</h3>
+              <p>From capsule wardrobes to seasonal trends, our style guides help you dress your best for every occasion.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌿</div>
+              <h3>Sustainable Fashion</h3>
+              <p>We're committed to responsible fashion. Learn about eco-friendly fabrics, ethical production, and conscious shopping.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">✂️</div>
+              <h3>Care &amp; Maintenance</h3>
+              <p>Extend the life of your clothes with our expert care tips covering washing, drying, storage, and repair.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── NEWSLETTER CTA ──────────────────────────── -->
+    <section style="background: var(--primary); padding: 60px 1.5rem; text-align: center;">
+      <div class="container">
+        <h2 style="color: white; font-size: 1.8rem; margin-bottom: 0.8rem;">Stay in the Loop</h2>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto;">
+          Get the latest fashion articles, exclusive offers, and style inspiration delivered straight to your inbox.
+        </p>
+        <div style="display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; max-width: 480px; margin: 0 auto;">
+          <input
+            type="email"
+            placeholder="Your email address"
+            style="flex: 1; min-width: 220px; padding: 0.85rem 1.2rem; border-radius: 50px; border: none; font-size: 0.95rem; outline: none;"
+          />
+          <button
+            class="btn btn-primary"
+            onclick="alert('Thank you for subscribing! Check your inbox for a confirmation email.')"
+          >Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Fashion<span>AI</span> Shop</a>
+        <p>Your AI-powered fashion destination. Discover style, reimagined with intelligence.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">✈️</a>
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">👥</a>
+          <a href="#" class="social-link">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="index.html#products">T-Shirts</a></li>
+          <li><a href="index.html#products">Jeans</a></li>
+          <li><a href="index.html#products">Dresses</a></li>
+          <li><a href="index.html#products">Jackets</a></li>
+          <li><a href="index.html#products">Shoes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html#returns">Returns</a></li>
+          <li><a href="faq.html#shipping">Shipping</a></li>
+          <li><a href="faq.html#sizing">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 FashionAI Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
